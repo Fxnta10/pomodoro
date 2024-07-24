@@ -16,25 +16,25 @@
 
 
     <div class="mainTimer">
-        <p class="TickTime">25:00</p>
+        <p id='TickTime' class="TickTime">25 : 00</p>
         <div class="categorySelection">
-            <button type="button" class="TopButtons">Pomodoro</button>
-            <button type="button" class="TopButtons">Short Break</button>
-            <button type="button" class="TopButtons">Long Break</button>
+            <button id='Pomodoro'type="button" class="TopButtons">Pomodoro</button>
+            <button id='shortbreak'type="button" class="TopButtons">Short Break</button>
+            <button id='longbreak'type="button" class="TopButtons">Long Break</button>
         </div>
         <div class="bottomButtons">
-            <button type="button" class="BottomButtons">START</button>
-            <button type="button" class="BottomButtons">PAUSE</button>
-            <button type="button" class="BottomButtons">RESET</button>
+            <button id='start' type="button" class="BottomButtons">START</button>
+            <button id='stop' type="button" class="BottomButtons">PAUSE</button>
+            <button id='reset' type="button" class="BottomButtons">RESET</button>
         </div>
     </div>
 
 
-    
-    <div class="TodayDate">
-        <p>Date: x </p>
-    </div>
 
+    <div class="TodayDate">
+        <p id="date">Date: x </p>
+    </div>
+<script src="./pomodoro.js"></script>
 
 </body>
 </html>
