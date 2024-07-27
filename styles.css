@@ -96,3 +96,7 @@ button:hover{
 .BottomButtons:hover{
     background-color: #0a1317;
 }
+
+.heading, .TopButtons,.mainTimer, body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}

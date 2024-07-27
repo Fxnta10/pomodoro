@@ -57,32 +57,59 @@ resetButton.addEventListener("click", function() {
     updateCountDown();
 });
 
-shortBreakButton.addEventListener("click",function(){
-    countDown.innerHTML='5 : 00'
-    startingMinutes=5;
-    time=startingMinutes*60;
+// shortBreakButton.addEventListener("click",function(){
+//     countDown.innerHTML='5 : 00'
+//     startingMinutes=5;
+//     time=startingMinutes*60;
 
-    clearInterval(startCount)
+//     clearInterval(startCount)
 
-    // startCount=setInterval(updateCountDown,1000)
+//     // startCount=setInterval(updateCountDown,1000)
 
-})
+// })
+
+const body=document.getElementsByTagName("body")[0];
+const header=document.getElementsByClassName("heading")[0]
+const timer=document.getElementsByClassName("mainTimer")[0]
+const topbuttons1=document.getElementsByClassName("TopButtons")[0]
+const topbuttons2=document.getElementsByClassName("TopButtons")[1]
+const topbuttons3=document.getElementsByClassName("TopButtons")[2]
+
 
 PomodoroButton.addEventListener("click",function(){
     countDown.innerHTML='25 : 00'
     startingMinutes=25;
     time=startingMinutes*60;
+
+    header.style.backgroundColor='#97C2D4'
+    timer.style.backgroundColor='#97C2D4'
+    topbuttons1.style.backgroundColor='#97C2D4'
+    topbuttons2.style.backgroundColor='#97C2D4'
+    topbuttons3.style.backgroundColor='#97C2D4'
+    body.style.color='#0B161B'
+
+
     clearInterval(startCount);
 })
 
+
+
 shortBreakButton.addEventListener("click",function(){
-    countDown.innerHTML='15 : 00'
+    countDown.innerHTML='05 : 00'
     // var div = document.getElementById('mainTimer');
     // div.style.backgroundColor='#433074'
     // div.style.color='#433074'
 
-    startingMinutes=15;
+    startingMinutes=5;
     time=startingMinutes*60;
+
+    header.style.backgroundColor='#433074'
+    timer.style.backgroundColor='#433074'
+    topbuttons1.style.backgroundColor='#433074'
+    topbuttons2.style.backgroundColor='#433074'
+    topbuttons3.style.backgroundColor='#433074'
+
+    body.style.color='#E6F1F5'
 
     clearInterval(startCount)
 
@@ -91,39 +118,40 @@ shortBreakButton.addEventListener("click",function(){
 })
 
 longBreakButton.addEventListener("click",function(){
-    countDown.innerHTML='20 : 00'
-    startingMinutes=20;
+    countDown.innerHTML='15 : 00'
+    startingMinutes=15;
     time=startingMinutes*60;
 
+    header.style.backgroundColor='#9C6CC3'
+    timer.style.backgroundColor='#9C6CC3'
+    topbuttons1.style.backgroundColor='#9C6CC3'
+    topbuttons2.style.backgroundColor='#9C6CC3'
+    topbuttons3.style.backgroundColor='#9C6CC3'
+    body.style.color='#433074'
+    
     clearInterval(startCount)
 
     // startCount=setInterval(updateCountDown,1000)
 
 })
 
-shortBreakButton.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('shortbreak').addEventListener('click', function() {
-        var div = document.getElementById('myDiv');
-        if (div) {
-            // Set the font color of the div to a specific hex code
-            div.style.backgroundColor='#433074'
-            div.style.color='#433074'// Example hex color for font
-        } else {
-            console.error('Element with id "myDiv" not found.');
-        }
-    });
-});
 
-longBreakButton.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('longbreak').addEventListener('click', function() {
-        var div = document.getElementById('myDiv');
-        if (div) {
-            // Set the font color of the div to a specific hex code
-            div.style.color = '#FF5733'; // Example hex color for font
-        } else {
-            console.error('Element with id "myDiv" not found.');
-        }
-    });
-});
+//  Color Flipping when buttons are pressed 
 
+
+// shortBreakButton.addEventListener('DOMContentLoaded', function() {
+//     document.getElementById('shortbreak').addEventListener('click', function() {
+//         header.style.backgroundColor='#433074'
+//         timer.style.backgroundColor='#433074'
+//         body.style.color='#E6F1F5'
+//     });
+// });
+
+// longBreakButton.addEventListener('DOMContentLoaded', function() {
+//     document.getElementById('longbreak').addEventListener('click', function() {
+//         header.style.backgroundColor='#9C6CC3'
+//         timer.style.backgroundColor='#9C6CC3'
+//         body.style.color='#433074'
+//     });
+// });
 
