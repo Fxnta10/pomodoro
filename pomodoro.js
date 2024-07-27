@@ -34,7 +34,7 @@ const resetButton = document.getElementById("reset");
 
 const PomodoroButton = document.getElementById("Pomodoro");
 const shortBreakButton=document.getElementById("shortbreak")
-const longbreakButton=document.getElementById("longbreak")
+const longBreakButton=document.getElementById("longbreak")
 
 startButton.addEventListener("click", function() {
     // Clear any existing interval to prevent multiple intervals running simultaneously
@@ -77,6 +77,10 @@ PomodoroButton.addEventListener("click",function(){
 
 shortBreakButton.addEventListener("click",function(){
     countDown.innerHTML='15 : 00'
+    // var div = document.getElementById('mainTimer');
+    // div.style.backgroundColor='#433074'
+    // div.style.color='#433074'
+
     startingMinutes=15;
     time=startingMinutes*60;
 
@@ -85,4 +89,41 @@ shortBreakButton.addEventListener("click",function(){
     // startCount=setInterval(updateCountDown,1000)
 
 })
+
+longBreakButton.addEventListener("click",function(){
+    countDown.innerHTML='20 : 00'
+    startingMinutes=20;
+    time=startingMinutes*60;
+
+    clearInterval(startCount)
+
+    // startCount=setInterval(updateCountDown,1000)
+
+})
+
+shortBreakButton.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('shortbreak').addEventListener('click', function() {
+        var div = document.getElementById('myDiv');
+        if (div) {
+            // Set the font color of the div to a specific hex code
+            div.style.backgroundColor='#433074'
+            div.style.color='#433074'// Example hex color for font
+        } else {
+            console.error('Element with id "myDiv" not found.');
+        }
+    });
+});
+
+longBreakButton.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('longbreak').addEventListener('click', function() {
+        var div = document.getElementById('myDiv');
+        if (div) {
+            // Set the font color of the div to a specific hex code
+            div.style.color = '#FF5733'; // Example hex color for font
+        } else {
+            console.error('Element with id "myDiv" not found.');
+        }
+    });
+});
+
 

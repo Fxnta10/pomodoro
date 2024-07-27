@@ -1,4 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 body{
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
     background-color: #0B161B;
     color: #E6F1F5;
+}
+
+
+
+.heading{
+    background-color: #97C2D4;
+    color: #0B161B;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.topright{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    right: 0;
+    padding: 10px;
+
+}
+
+.mainTimer{
+    border-radius: 28px;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    margin-top: 110px;
+    padding:15px;
+    display: flex;
+    background-color: #97C2D4; 
+    color: #0B161B;
+    /* background color and text color will be changed according to the buttons( modes) */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.TickTime{
+    font-size: 85px;
+}
+
+
+.categorySelection{
+    display: flex;
+
+}
+
+.TopButtons{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 20px;
+    padding-right: 35px;
+    padding-left: 35px;
+    border: none;
+    background-color: #97C2D4 ;
+}
+
+.BottomButtons{
+    font-size: 1.25rem;
+    background-color: #0B161B;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    padding-right: 35px;
+    padding-left: 35px;
+
+}
+
+.TodayDate{
+    padding: 25px;
+    display: flex;
+    align-self: center;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.TopButtons:hover{
+    background-color: #8cb3c4;
+}
+
+.BottomButtons:hover{
+    background-color: #0a1317;
 }
