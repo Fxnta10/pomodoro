@@ -81,12 +81,21 @@ PomodoroButton.addEventListener("click",function(){
     startingMinutes=25;
     time=startingMinutes*60;
 
+    shortBreakButton.style.color='#0B161B'
+    PomodoroButton.style.color='#0B161B'
+    longBreakButton.style.color='#0B161B'
+
+
     header.style.backgroundColor='#97C2D4'
     timer.style.backgroundColor='#97C2D4'
-    topbuttons1.style.backgroundColor='#97C2D4'
+    // changing the color of the background when clicked
+    topbuttons1.style.backgroundColor='#7db3c9'
     topbuttons2.style.backgroundColor='#97C2D4'
     topbuttons3.style.backgroundColor='#97C2D4'
     body.style.color='#0B161B'
+
+
+
 
 
     clearInterval(startCount);
@@ -103,13 +112,17 @@ shortBreakButton.addEventListener("click",function(){
     startingMinutes=5;
     time=startingMinutes*60;
 
+
+    shortBreakButton.style.color='#E6F1F5'
+    PomodoroButton.style.color='#E6F1F5'
+    longBreakButton.style.color='#E6F1F5'
+    
     header.style.backgroundColor='#433074'
     timer.style.backgroundColor='#433074'
     topbuttons1.style.backgroundColor='#433074'
-    topbuttons2.style.backgroundColor='#433074'
+    topbuttons2.style.backgroundColor='#3c2b68'
     topbuttons3.style.backgroundColor='#433074'
-
-    body.style.color='#E6F1F5'
+    document.body.style.color='#E6F1F5'
 
     clearInterval(startCount)
 
@@ -122,12 +135,17 @@ longBreakButton.addEventListener("click",function(){
     startingMinutes=15;
     time=startingMinutes*60;
 
+    shortBreakButton.style.color='#0B161B'
+    PomodoroButton.style.color='#0B161B'
+    longBreakButton.style.color='#0B161B'
+
     header.style.backgroundColor='#9C6CC3'
     timer.style.backgroundColor='#9C6CC3'
     topbuttons1.style.backgroundColor='#9C6CC3'
     topbuttons2.style.backgroundColor='#9C6CC3'
-    topbuttons3.style.backgroundColor='#9C6CC3'
-    body.style.color='#433074'
+    topbuttons3.style.backgroundColor='#8e56ba'
+
+    document.body.style.color='#0B161B'
     
     clearInterval(startCount)
 
@@ -136,22 +154,32 @@ longBreakButton.addEventListener("click",function(){
 })
 
 
-//  Color Flipping when buttons are pressed 
+const menuSidebar= document.getElementById('menuSide');
 
+const menuButton=document.getElementById('threeBars');
+const crossButton=document.getElementById('closeButton');
 
-// shortBreakButton.addEventListener('DOMContentLoaded', function() {
-//     document.getElementById('shortbreak').addEventListener('click', function() {
-//         header.style.backgroundColor='#433074'
-//         timer.style.backgroundColor='#433074'
-//         body.style.color='#E6F1F5'
-//     });
-// });
+crossButton.style.display='none'
+menuSidebar.style.display='none'
 
-// longBreakButton.addEventListener('DOMContentLoaded', function() {
-//     document.getElementById('longbreak').addEventListener('click', function() {
-//         header.style.backgroundColor='#9C6CC3'
-//         timer.style.backgroundColor='#9C6CC3'
-//         body.style.color='#433074'
-//     });
-// });
+menuButton.addEventListener('click',function(){
+    menuSidebar.style.display='block';
+    menuButton.style.display='none'
+    crossButton.style.display='block';
+    crossButton.addEventListener('click',function(){
+        menuSidebar.style.display='none';
+        crossButton.style.display='none'
+        menuButton.style.display='block'
+    })
+})
 
+const pomodoroSelection=document.getElementById('pomodoroSelect')
+const toDoSelection=document.getElementById('TodoSelect')
+
+pomodoroSelection.addEventListener('click',function(){
+
+})
+
+toDoSelection.addEventListener('click',function(){
+    
+})
