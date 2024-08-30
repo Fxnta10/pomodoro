@@ -154,32 +154,70 @@ longBreakButton.addEventListener("click",function(){
 })
 
 
-const menuSidebar= document.getElementById('menuSide');
+// const menuSidebar= document.getElementById('menuSide');
 
-const menuButton=document.getElementById('threeBars');
-const crossButton=document.getElementById('closeButton');
+// const menuButton=document.getElementById('threeBars');
+// const crossButton=document.getElementById('closeButton');
 
-crossButton.style.display='none'
-menuSidebar.style.display='none'
+// crossButton.style.display='none'
+// menuSidebar.style.display='none'
 
-menuButton.addEventListener('click',function(){
-    menuSidebar.style.display='block';
-    menuButton.style.display='none'
-    crossButton.style.display='block';
-    crossButton.addEventListener('click',function(){
-        menuSidebar.style.display='none';
-        crossButton.style.display='none'
-        menuButton.style.display='block'
-    })
-})
+// menuButton.addEventListener('click',function(){
+//     menuSidebar.style.width='250px';
+//     menuButton.style.display='none'
+//     crossButton.style.display='block';
+//     crossButton.addEventListener('click',function(){
+//         menuSidebar.style.width='0px';
+//         crossButton.style.display='none'
+//         menuButton.style.display='block'
+//     })
+// })
+const menuSidebar = document.getElementById('menuSide');
+const menuButton = document.getElementById('threeBars');
+const crossButton = document.getElementById('closeButton');
+
+// Hide the sidebar and cross button initially
+menuSidebar.classList.add('hidden');
+crossButton.classList.add('hidden');
+
+// Function to show the sidebar
+function showSidebar() {
+    menuSidebar.classList.remove('hidden');
+    menuSidebar.classList.add('visible');
+    menuButton.classList.add('hidden');
+    crossButton.classList.remove('hidden');
+
+    const bgcolor=timer.style.backgroundColor;
+    // const textcolor=time.style.color;
+    menuSidebar.style.backgroundColor=bgcolor;
+    // menuSidebar.style.color=textcolor;
+}
+
+// Function to hide the sidebar
+function hideSidebar() {
+    menuSidebar.classList.remove('visible');
+    menuSidebar.classList.add('hidden');
+    menuButton.classList.remove('hidden');
+    crossButton.classList.add('hidden');
+}
+
+menuButton.addEventListener('click', showSidebar);
+crossButton.addEventListener('click', hideSidebar);
+
 
 const pomodoroSelection=document.getElementById('pomodoroSelect')
-const toDoSelection=document.getElementById('TodoSelect')
+const toDoSelection=document.querySelector('.TodoSelect')
 
-pomodoroSelection.addEventListener('click',function(){
+// pomodoroSelection.addEventListener('click',function(){
 
-})
+// })
 
 toDoSelection.addEventListener('click',function(){
+    console.log("clicked on the todoselector")
+    timer.style.display="none"
+    menuSidebar.classList.add('hidden');
+    crossButton.classList.add('hidden');
+    menuButton.classList.remove('hidden');
+
     
 })

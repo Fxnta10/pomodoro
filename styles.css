@@ -117,15 +117,52 @@ button:hover{
     padding: 10px;
 }
 
-.menu{
+/* .menu{
     background-color: #97C2D4;
     display: flex;
     flex-direction: column;
+    position:fixed;
     color: #0B161B;
-    width: 10rem;
+    width: 0;
     align-self: flex-start;
     padding: 10px;
+    height: 100vh;
+    transition: all 0.5s ease;
+} */
+.menu {
+    background-color: #97C2D4;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    color: #0B161B;
+    width: 0;
+    align-self: flex-start;
+    padding: 0px;
+    height: 100vh;
+    transition:  2.5s; 
+    overflow: hidden;/* Fixed transition */
 }
+
+.menu.visible {
+    margin-top:40px;
+    width: 200px; /* Width when visible */
+}
+
+.menu.hidden {
+    width: 0; /* Width when hidden */
+}
+
+/* Hide and show buttons */
+#threeBars.hidden,
+#closeButton.hidden {
+    display: none;
+}
+
+#threeBars,
+#closeButton {
+    display: block;
+}
+
 
 #threeBards,#closeButton,#menuSide{
     transition: visibility 0.5s ease;
