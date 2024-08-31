@@ -205,19 +205,52 @@ menuButton.addEventListener('click', showSidebar);
 crossButton.addEventListener('click', hideSidebar);
 
 
-const pomodoroSelection=document.getElementById('pomodoroSelect')
+const pomodoroSelection=document.querySelector('.pomodoroSelect')
 const toDoSelection=document.querySelector('.TodoSelect')
 
-// pomodoroSelection.addEventListener('click',function(){
 
-// })
+const TodoListPage=document.querySelector(".TodoListPage");
+TodoListPage.style.display="none"
+
 
 toDoSelection.addEventListener('click',function(){
     console.log("clicked on the todoselector")
-    timer.style.display="none"
     menuSidebar.classList.add('hidden');
     crossButton.classList.add('hidden');
     menuButton.classList.remove('hidden');
-
+    timer.style.display="none"
+    TodoListPage.style.display="block"
     
 })
+
+pomodoroSelection.addEventListener('click',function(){
+    menuSidebar.classList.add('hidden');
+    crossButton.classList.add('hidden');
+    menuButton.classList.remove('hidden');
+    TodoListPage.style.display="none"
+    timer.style.display=""
+
+})
+
+
+const tasks=[{
+    taskName : "Do your Homework of DEVC.",
+    status:"Pending",
+    Notes:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+
+},
+{
+
+}]
+
+
+function addTask(name){
+    const newTask={
+
+    }
+    newTask.taskName=name
+    newTask.status="Pending"
+    newTask.Notes=""
+
+    tasks.push(newTask);
+}

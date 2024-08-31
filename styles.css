@@ -1,7 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+:root {
+    --headingBlue: #96d4d3;
+    --white: #ffffff;
+    --blockViolet: #402f73;
+    --bgBlack: #1e1e1e;
+  }
 body{
     display: flex;
     flex-direction: column;
@@ -167,3 +172,75 @@ button:hover{
 #threeBards,#closeButton,#menuSide{
     transition: visibility 0.5s ease;
 }
+
+.TodoListPage {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mainBody {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .addTaskForm {
+    margin-left: 50px;
+  }
+  
+  #nameoftask {
+    color: white;
+    font-weight: 600;
+    font-size: 23px;
+    margin-bottom: 10px;
+  }
+  
+  #addTaskInput {
+    border-radius: 20px;
+    height: 10px;
+    width: 275px;
+    font-size: 14px;
+    padding: 15px;
+    border: none;
+    font-family: Poppins;
+    font-weight: 400;
+  }
+  
+  #idButton {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    border-radius: 15px;
+    font-weight: 600;
+    background-color: var(--blockViolet);
+    color: white;
+    border: none;
+    margin-left: 10px;
+  }
+  
+  .TodoList {
+    background-color: var(--headingBlue);
+    color: var(--bgBlack);
+    width: 40%;
+    height: 80%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  
+  .aboutTask {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 80%;
+    background-color: var(--blockViolet);
+    color: var(--white);
+    align-content: space-between;
+    margin-right: 50px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 30px;
+  }
