@@ -72,7 +72,7 @@
         </div>
         <div class="mainBody">
           <div id="taskList" class="TodoList">
-            <ul>
+            <ul id="listOfTasks">
               <li>
                 Consider your schedule:Know your schedule and responsibilities.
               </li>
@@ -86,17 +86,19 @@
   
           <div class="aboutTask">
             <div class="taskHeading">Task:Make Coffee with Cappuccino</div>
+            <hr class="line">
             <div class="notes">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
+              <label id='noteLabel'for="noteContent">Notes:</label>
+              <p id="noteContent"contenteditable="true">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s,
+              </p>
             </div>
+            <hr class="line">
             <div class="markAsComplete">
-              <input
-                class="button"
-                type="completeButton"
-                value="Mark As Compelete"
-              />
+              <button class="button" type="button">
+                Mark As Complete
+              </button>
             </div>
           </div>
         </div>
@@ -107,6 +109,7 @@
         <p id="date">Date: x </p>
     </div>
 <script src="./pomodoro.js"></script>
+<script src="./todo.js"></script>
 
 </body>
 </html>

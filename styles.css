@@ -186,6 +186,7 @@ button:hover{
   }
   
   .addTaskForm {
+
     margin-left: 50px;
   }
   
@@ -203,7 +204,6 @@ button:hover{
     font-size: 14px;
     padding: 15px;
     border: none;
-    font-family: Poppins;
     font-weight: 400;
   }
   
@@ -225,7 +225,7 @@ button:hover{
     background-color: var(--headingBlue);
     color: var(--bgBlack);
     width: 40%;
-    height: 80%;
+    min-height: 80%;
     margin-top: 20px;
     padding: 10px;
     border-radius: 30px;
@@ -235,12 +235,56 @@ button:hover{
     display: flex;
     flex-direction: column;
     width: 40%;
-    height: 80%;
+    min-height: 80%;
     background-color: var(--blockViolet);
     color: var(--white);
-    align-content: space-between;
+    justify-content: space-between;
     margin-right: 50px;
     margin-top: 20px;
     padding: 10px;
     border-radius: 30px;
   }
+
+  .strikeOff.taskItems {
+    text-decoration: line-through;
+  }
+
+  .line{
+    width: 100%;
+  }
+
+  .taskHeading{
+    font-weight: 600;
+    font-size: 22px;
+    margin: 10px;
+    align-self: center;
+  }
+
+  .notes{
+    min-height: 200px;
+    font-weight: 300;
+    padding: 20px;
+  }
+
+  .markAsComplete{
+    align-self: center;
+  }
+  
+  .button{
+    border: none;
+    border-radius: 25px;
+    margin: 5px;
+    padding: 12px;
+    text-align: center;
+    width: 250px;
+    background-color: var(--bgBlack);
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  #noteLabel{
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  
