@@ -287,4 +287,45 @@ button:hover{
     text-decoration: underline;
   }
 
+
+  .taskHeading.default{
+    font-weight: 400;
+
+  }
+
+  .noteContent.default{
+    font-weight: 200;
+  }
   
+  #defaultText{
+    text-align: center;
+    text-decoration:dashed;
+    font-weight: 450;
+    font-size: 20px;
+  }
+
+  #noteContent{
+    min-height: 70px;
+    border:1px dotted #ffffff;
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  #idButton:hover{
+    border:1px solid #ffffff;
+    background-color: var(--white);
+    color: var(--bgBlack);
+    transition: color 0.5s ease, background-color 0.5s ease;
+  }
+
+  #markAsCompleteButton:hover{
+    transition: color 0.5s ease, background-color 0.5s ease;
+    border: 1px solid white;
+    background-color: var(--white);
+    color: var(--bgBlack);
+  }
+
+  li{
+    font-size: 20px;
+    list-style: disc;
+  }

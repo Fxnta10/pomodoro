@@ -72,15 +72,16 @@
         </div>
         <div class="mainBody">
           <div id="taskList" class="TodoList">
+            <p id="defaultText">Add a task to view the Todo List </p>
             <ul id="listOfTasks">
-              <li>
+              <!-- <li>
                 Consider your schedule:Know your schedule and responsibilities.
               </li>
               <li>
                 Organize by priority:Put the most important tasks at the top and
                 the least important at the bottom
               </li>
-              <li>Least important at the bottom</li>
+              <li>Least important at the bottom</li> -->
             </ul>
           </div>
   
@@ -89,14 +90,11 @@
             <hr class="line">
             <div class="notes">
               <label id='noteLabel'for="noteContent">Notes:</label>
-              <p id="noteContent"contenteditable="true">Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy text
-                ever since the 1500s,
-              </p>
+              <p id="noteContent"contenteditable="true"name="noteContent" ></p>
             </div>
             <hr class="line">
             <div class="markAsComplete">
-              <button class="button" type="button">
+              <button id="markAsCompleteButton" class="button" type="button">
                 Mark As Complete
               </button>
             </div>
